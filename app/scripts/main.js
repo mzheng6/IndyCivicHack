@@ -17,7 +17,7 @@ function formSubmission(merchantID_in)
 	var fullname_str = ((document.getElementById("fullname")).value).toString();
 	var email_str = ((document.getElementById("email")).value).toString();
 	var transaction_str = ((document.getElementById("trans")).value).toString();
-	addUser(fullname_str, email_str, transaction_str);
+	addUser(fullname_str, email_str, transaction_str, id);
 
 }
 
@@ -68,7 +68,7 @@ function generateUniqueID()
 	return hash_str.hashCode();
 }
 
-function addUser(fullName, email, transaction_amt)
+function addUser(fullName, email, transaction_amt, id_in)
 {
 	var merch_tbl = document.getElementById("merchant_table");
 	// var new_user = document.createElement("tr");
@@ -87,9 +87,10 @@ function addUser(fullName, email, transaction_amt)
 	var cell1 = row.insertCell(0);
 	var cell2 = row.insertCell(1);
 	var cell3 = row.insertCell(2);
-
+	var cell4 = row.insertCell(3);
 	// Add some text to the new cells:
 	cell1.innerHTML = fullName;
 	cell2.innerHTML = email;
 	cell3.innerHTML = transaction_amt;
+	cell4.innerHTML = id_in;
 }
