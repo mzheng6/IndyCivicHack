@@ -15,5 +15,5 @@ Running `grunt test` will run the unit tests with karma.
 
 /app/index.html
 
-##Database code
+##Database and Server Code
 see 'deep' branch
